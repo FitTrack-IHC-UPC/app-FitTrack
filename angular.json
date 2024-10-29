@@ -22,8 +22,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
+
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -81,7 +83,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -92,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "35e95316-9aff-4b75-843e-eb7852d89a28"
   }
 }
