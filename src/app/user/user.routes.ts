@@ -9,20 +9,20 @@ import { PaymentComponent } from './pages/basic/payment/payment.component';
 import { SubscribeComponent } from './pages/basic/subscribe/subscribe.component';
 import { SuccessPaymentComponent } from './pages/basic/success-payment/success-payment.component';
 //ACCOUNT COMPONENTS
-import { DashboardComponent } from './components/account/dashboard/dashboard.component';
-import { HomeComponent } from './components/account/home/home.component';
-import { UpdateProfileComponent } from './components/account/update-profile/update-profile.component';
+import { DashboardComponent } from './pages/general/account/dashboard/dashboard.component';
+import { HomeComponent } from './pages/general/account/home/home.component';
+import { UpdateProfileComponent } from './pages/general/account/update-profile/update-profile.component';
 //EXERCISE COMPONENTS
-import { ActivityLevelComponent } from './components/exercise/activity-level/activity-level.component';
-import { CompleteRoutineComponent } from './components/exercise/complete-routine/complete-routine.component';
-import { CreateRoutineComponent } from './components/exercise/create-routine/create-routine.component';
-import { ExerciseHomeComponent } from './components/exercise/exercise-home/exercise-home.component';
-import { GoalComponent } from './components/exercise/goal/goal.component';
-import { YourRoutineComponent } from './components/exercise/your-routine/your-routine.component';
+import { ActivityLevelComponent } from './pages/general/exercise/activity-level/activity-level.component';
+import { CompleteRoutineComponent } from './pages/general/exercise/complete-routine/complete-routine.component';
+import { CreateRoutineComponent } from './pages/general/exercise/create-routine/create-routine.component';
+import { ExerciseHomeComponent } from './pages/general/exercise/exercise-home/exercise-home.component';
+import { GoalComponent } from './pages/general/exercise/goal/goal.component';
+import { YourRoutineComponent } from './pages/general/exercise/your-routine/your-routine.component';
 //NUTRITION COMPONENTS
-import { FoodPreferenceComponent } from './components/nutrition/food-preference/food-preference.component';
-import { MealPlanComponent } from './components/nutrition/meal-plan/meal-plan.component';
-import { RecipeComponent } from './components/nutrition/recipe/recipe.component';
+import { FoodPreferenceComponent } from './pages/general/nutrition/food-preference/food-preference.component';
+import { MealPlanComponent } from './pages/general/nutrition/meal-plan/meal-plan.component';
+import { RecipeComponent } from './pages/general/nutrition/recipe/recipe.component';
 
 export const UserRoutes: Routes = [
     {
