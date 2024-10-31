@@ -10,12 +10,4 @@ export interface SignUpData {
   confirmPassword: string;
 }
 
-export interface PasswordReset {
-  email: string;
-}
-
-export interface SetPassword {
-  newPassword: string;
-  confirmPassword: string;
-}
 

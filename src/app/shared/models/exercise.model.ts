@@ -5,4 +5,5 @@ export interface Exercise {
     calories: number;
     image: Blob;
     repetitions: number;
+    type: 'basic' | 'premium';
 }
