@@ -42,7 +42,7 @@ export const UserRoutes: Routes = [
             {
                 path: 'basic',
                 children: [
-                    { path: 'payment', component: PaymentComponent },
+                    { path: 'payment/:amount', component: PaymentComponent },
                     { path: 'subscribe', component: SubscribeComponent },
                     { path: 'success-payment', component: SuccessPaymentComponent },
                 ]
