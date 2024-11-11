@@ -1,0 +1,56 @@
+<app-exercise-header></app-exercise-header>
+<div class="exercise-routine">
+  <h1>Tu Rutina</h1>
+
+  <div cdkDropListGroup>
+    <div *ngFor="let round of rounds; let roundIndex = index" class="round">
+      <h2>Round {{ roundIndex + 1 }}</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="round"
+        class="exercise-container"
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListSortingDisabled]="round.length <= 1"
+      >
+        <div
+          *ngFor="let exercise of round; let exerciseIndex = index"
+          cdkDrag
+          class="exercise-card"
+        >
+          <div class="card-image">
+            <img [src]="exercise.imageUrl" alt="{{ exercise.title }}" />
+          </div>
+          <div class="card-info">
+            <h3>{{ exercise.title }}</h3>
+            <div class="details">
+              <p>
+                <img src="assets/images/icons/time.png" alt="Time" class="icon" />
+                {{ exercise.duration }} Minutos
+              </p>
+              <p>
+                <img src="assets/images/icons/calories.png" alt="Calories" class="icon" />
+                {{ exercise.calories }} Kcal
+              </p>
+              <p>
+                <img src="assets/images/icons/workout.png" alt="Exercises" class="icon" />
+                {{ exercise.reps }} Reps
+              </p>
+            </div>
+          </div>
+          <button class="delete-btn" (click)="deleteExercise(roundIndex, exerciseIndex)">X</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Place the add routine button here, so it appears only once at the end -->
+    <button
+      *ngIf="rounds.length > 0"
+      class="add-routine-btn"
+      (click)="addRoutine()"
+    >+ Añadir Rutina</button>
+  </div>
+
+  <button *ngIf="selectedExercises.length > 0" class="start-btn" (click)="startRoutine()">Empezar</button>
+
+  <p *ngIf="selectedExercises.length === 0" class="no-more-exercises">No hay más ejercicios.</p>
+</div>

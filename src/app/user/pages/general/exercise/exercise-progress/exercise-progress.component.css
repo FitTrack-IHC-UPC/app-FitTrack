@@ -1,0 +1,182 @@
+.exercise-progress-container {
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+  font-family: Poppins, sans-serif;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center everything horizontally */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px; /* Space between image and info */
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center;
+  margin: 5px 0;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gender-symbol {
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: larger;
+  color: #beca56;
+}
+
+.divider img {
+  margin: 0 10px;
+}
+
+/* Progress Section */
+.progress-section {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.progress-bars {
+  display: flex;
+  justify-content: center; /* Center the bars */
+  gap: 20px; /* Add space between progress bars */
+  margin-top: 10px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-container {
+  width: 20px;
+  height: 100px;
+  position: relative;
+  background: lightgray;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0; /* Add spacing */
+}
+
+.empty-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightgray;
+}
+
+.filled-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: yellow;
+}
+
+.calorie-label,
+.day-label {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Activities Section */
+.activities-section {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.activity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  width: 150%; /* Adjust width to fit better */
+  max-width: 650px; /* Ensure cards don't stretch too wide */
+  border-radius: 8px;
+}
+
+.activity-image img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-info .row {
+  display: flex;
+  justify-content: space-between; /* Space elements evenly */
+}
+
+.yellow {
+  color: yellow;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* General Container Alignment */
+.exercise-progress-container {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center entire container content */
+}
+
+/* Home Button */
+.home-btn {
+  display: block;
+  width: 90%;
+  max-width: 250px;
+  max-width: 2  0px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #beca56;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #d9d9d9;
+}
+

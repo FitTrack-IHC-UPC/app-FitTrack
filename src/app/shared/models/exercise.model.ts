@@ -1,9 +1,9 @@
 export interface Exercise {
-    id: number;
-    name: string;
-    time: string;
-    calories: number;
-    image: Blob;
-    repetitions: number;
-    type: 'basic' | 'premium';
+  title: string;
+  duration: number;
+  reps: number;
+  calories: number;
+  imageUrl: string;
+  level: 'Principiante' | 'Intermedio' | 'Avanzado';
+  isSelected?: boolean;
 }

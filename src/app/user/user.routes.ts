@@ -13,12 +13,12 @@ import { DashboardComponent } from './pages/general/account/dashboard/dashboard.
 import { HomeComponent } from './pages/general/account/home/home.component';
 import { UpdateProfileComponent } from './pages/general/account/update-profile/update-profile.component';
 //EXERCISE COMPONENTS
-import { ActivityLevelComponent } from './pages/general/exercise/activity-level/activity-level.component';
-import { CompleteRoutineComponent } from './pages/general/exercise/complete-routine/complete-routine.component';
-import { CreateRoutineComponent } from './pages/general/exercise/create-routine/create-routine.component';
 import { ExerciseHomeComponent } from './pages/general/exercise/exercise-home/exercise-home.component';
-import { GoalComponent } from './pages/general/exercise/goal/goal.component';
-import { YourRoutineComponent } from './pages/general/exercise/your-routine/your-routine.component';
+import { ExerciseGoalComponent } from './pages/general/exercise/exercise-goal/exercise-goal.component';
+import { ExerciseVideoComponent } from './pages/general/exercise/exercise-video/exercise-video.component';
+import { ExerciseRoutineComponent } from './pages/general/exercise/exercise-routine/exercise-routine.component';
+import { ExerciseRoutineCreateComponent } from './pages/general/exercise/exercise-routine-create/exercise-routine-create.component';
+import { ExerciseProgressComponent } from './pages/general/exercise/exercise-progress/exercise-progress.component';
 //NUTRITION COMPONENTS
 import { FoodPreferenceComponent } from './pages/general/nutrition/food-preference/food-preference.component';
 import { MealPlanComponent } from './pages/general/nutrition/meal-plan/meal-plan.component';
@@ -55,12 +55,12 @@ export const UserRoutes: Routes = [
             {
                 path: 'exercise',
                 children: [
-                    { path: 'activity-level', component: ActivityLevelComponent },
-                    { path: 'complete-routine', component: CompleteRoutineComponent },
-                    { path: 'create-routine', component: CreateRoutineComponent },
+                    { path: 'exercise-goal', component: ExerciseGoalComponent },
+                    { path: 'exercise-video', component: ExerciseVideoComponent },
+                    { path: 'exercise-routine', component: ExerciseRoutineComponent },
                     { path: 'exercise-home', component: ExerciseHomeComponent },
-                    { path: 'goal', component: GoalComponent },
-                    { path: 'your-routine', component: YourRoutineComponent },
+                    { path: 'exercise-routine-create', component: ExerciseRoutineCreateComponent },
+                    { path: 'exercise-progress', component: ExerciseProgressComponent },
                 ]
             },
             //NUTRITION COMPONENTS
