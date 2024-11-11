@@ -1,1 +1,44 @@
-<p>subscribe works!</p>
+<app-header label="◀ Suscripciones" text="user/home"></app-header>
+<div class="container">
+  <div class="tittle">
+    <h3>PREMIUM</h3>
+  </div>
+  <div class="content">
+    <h3>Accede a recursos proporcionados por  &nbsp;<strong>EXPERTOS</strong></h3>
+    <ul>
+      <li>Video de ejercicios avanzados.</li>
+      <li>Recetas Saludables.</li>
+      <li>Guías para el Manejo del Estrés.</li>
+      <li>Entrenamientos Personalizados.</li>
+      <li>Asesoramiento Nutricional.</li>
+      <li>Recomendaciones sobre los entrenamientos.</li>
+      <li>Artículos de salud y bienestar.</li>
+      <li>Y MÁS!</li>
+    </ul>
+    <div>
+      <h3>¡Eliga un plan!</h3>
+    </div>
+    <div class="opciones">
+      <label>
+        <input type="radio" name="opcion"  (change)="montoSeleccionado = 35" />
+        <span><em>Plan Mensual - S/35.00</em></span>
+      </label>
+      <label>
+        <input type="radio" name="opcion"  (change)="montoSeleccionado = 350" />
+        <span><em>Plan Anual - S/350.00</em></span>
+      </label>
+    </div>
+    <div class="button_comprar">
+      <button (click)="irAPago()">
+        <p>Pagar ahora</p>
+      </button>
+    </div>
+
+  </div>
+  <br>
+  <br>
+</div>
+
+
+
+
