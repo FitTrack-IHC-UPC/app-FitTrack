@@ -1,0 +1,113 @@
+/* Wrapper for centering the content */
+.exercise-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 15px;
+  background-color: #f7f7f7;
+}
+
+/* Container for exercise image with center-aligned play button */
+.exercise-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.exercise-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.exercise-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Play Button Overlay */
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(179, 160, 255, 0.8);
+  border-radius: 50%;
+  padding: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.play-button-overlay img {
+  width: 40px;
+  height: 40px;
+}
+
+.play-button-overlay:hover {
+  background-color: rgba(137, 108, 254, 0.9);
+}
+
+/* Exercise info card */
+.exercise-info-card {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Details for time, calories, reps */
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.details p {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 0;
+  gap: 5px;
+}
+
+.details img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Centered Completed button */
+.completed-button {
+  background-color: #896CFE;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 20px auto 0; /* Center button horizontally */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Ensure the button is treated as a block element */
+  text-align: center; /* Center text within the button */
+}
+
+.completed-button:hover {
+  background-color: #a37ef9;
+}
