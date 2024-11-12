@@ -1,0 +1,100 @@
+.exercise-goal {
+  text-align: center;
+  padding: 20px;
+
+  .content {
+    margin-top: 20px;
+
+    .trophy {
+      width: 350px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info-container {
+      background-color: #000;
+      border-radius: 20px;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 720px;
+
+      h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .exercise-info {
+        background-color: #fff;
+        color: #000;
+        border-radius: 15px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around; /* Align data inline */
+        align-items: center;
+        width: 100%;
+        max-width: 650px;
+
+        .info-item {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      button {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 200px;
+
+        &:first-of-type {
+          background-color: #6c63ff;
+          color: white;
+
+          &:hover {
+            background-color: #574fdb;
+          }
+        }
+
+        &.home-btn {
+          background-color: black;
+          color: white;
+
+          &:hover {
+            background-color: #333;
+          }
+        }
+      }
+    }
+  }
+}

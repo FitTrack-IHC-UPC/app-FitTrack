@@ -1,1 +1,53 @@
-<p>premium-home works!</p>
+<app-header label="◀ Recursos Premium" text="user/home"></app-header>
+<div class="container">
+  <div class="search-container">
+    <mat-form-field class="search-bar" appearance="outline">
+      <mat-label>Buscar</mat-label>
+      <input
+          matInput
+          placeholder="Busca por título o autor"
+          [(ngModel)]="searchValue"
+          (ngModelChange)="onSearch()"
+        />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="title">
+    <p>Rutinas de ejercicios</p>
+  </div>
+
+  <div class="videos-grid">
+    <div *ngFor="let video of filteredVideos" class="video-card">
+      <button (click)="goVideo(video.id)">
+        <app-video-premium
+          [title]="video.title"
+          [image] = "video.image"
+          [time]="video.time"
+          [calories]="video.calories"
+          [repetitions]="video.repetitions">
+        </app-video-premium>
+      </button>
+    </div>
+    <p *ngIf="filteredVideos.length === 0">No hay videos disponibles</p>
+  </div>
+
+  <div class="title">
+    <p>Artículos y Consejos</p>
+  </div>
+
+
+    <div class="articles-grid">
+      <div *ngFor="let article of filteredArticles" class="article-card">
+        <button (click)="goArticle(article.id)">
+          <app-premium-article
+            [title]="article.title"
+            [author]="article.author"
+            [img]="article.image">
+          </app-premium-article>
+        </button>
+      </div>
+      <p *ngIf="filteredArticles.length === 0">No hay artículos disponibles</p>
+    </div>
+
+
+</div>

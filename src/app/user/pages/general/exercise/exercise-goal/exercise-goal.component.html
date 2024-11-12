@@ -1,0 +1,32 @@
+<app-exercise-header></app-exercise-header>
+<div class="exercise-goal">
+  <div class="content">
+    <img class="trophy" src="/assets/images/Exercises/Trophy.png" alt="Trophy" />
+    <h1 class="title">¡Felicitaciones!</h1>
+    <div class="info-container">
+      <h2>{{ exercise?.title }}</h2>
+      <div class="exercise-info">
+        <div class="info-item">
+          <img src="/assets/images/icons/time.png" alt="Duration" />
+          <p>{{ exercise?.duration }} minutos</p>
+        </div>
+        <div class="info-item">
+          <img src="/assets/images/icons/workout.png" alt="Repetitions" />
+          <p>{{ exercise?.reps }} reps</p>
+        </div>
+        <div class="info-item">
+          <img src="/assets/images/icons/calories.png" alt="Calories" />
+          <p>{{ exercise?.calories }} kcal</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="noMoreExercises" class="no-more-exercises">No Hay Más ejercicios, Regresa a home.</div>
+
+    <div class="actions">
+      <button (click)="goToNextExercise()">Siguiente Ejercicio</button>
+      <button class="home-btn" (click)="goHome()">Inicio</button>
+    </div>
+  </div>
+</div>
+
