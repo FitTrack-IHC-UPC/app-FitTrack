@@ -37,7 +37,7 @@ export class FoodPreferenceComponent {
     console.log('Tipo de Comida Seleccionado:', this.selectedMealType);
 
     // Navega al nuevo componente
-    this.router.navigate(['/new']);
+    this.router.navigate(['/user/nutrition/meal-plan']);
   }
 
 }
