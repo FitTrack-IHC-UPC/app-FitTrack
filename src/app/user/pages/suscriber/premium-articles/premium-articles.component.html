@@ -1,1 +1,23 @@
-<p>premium-articles works!</p>
+<div class="principal">
+  <app-header label="◀ Artículos Premium" text="user/subscriber/premium-home"></app-header>
+  <div class="container">
+    <div class="top">
+      <div class="title">
+        <h6>{{article!.title}}</h6>
+      </div>
+      <div class="presentation">
+        <p>Autor: {{article!.author}}</p>
+        <p>Publicado el {{day}} de {{month}}</p>
+      </div>
+
+    </div>
+    <div class="content">
+      <div class="description">
+        <p>{{article!.content}}</p>
+      </div>
+    </div>
+    <div class="imagen">
+      <img [src]="article!.image" alt="Imagen del articulo">
+    </div>
+  </div>
+</div>
