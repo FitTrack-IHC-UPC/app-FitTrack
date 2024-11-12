@@ -1,1 +1,25 @@
-<p>recipe works!</p>
+<div class="recipe-detail">
+  <h1>{{ recipe.title }}</h1>
+  <div class="recipe-info">
+    <span>{{ recipe.time }}</span>
+    <span>🌟 {{ recipe.calories }} Cal</span>
+  </div>
+
+  <div class="recipe-image">
+    <img [src]="recipe.image" alt="{{ recipe.title }}">
+  </div>
+
+  <div class="recipe-section">
+    <h2>Ingredients</h2>
+    <ul>
+      <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+    </ul>
+  </div>
+
+  <div class="recipe-section">
+    <h2>Preparation</h2>
+    <p>{{ recipe.preparation }}</p>
+  </div>
+
+  <button class="save-button" (click)="saveRecipe()">Guardar Receta</button>
+</div>
