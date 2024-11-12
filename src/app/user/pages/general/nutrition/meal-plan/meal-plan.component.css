@@ -1,0 +1,94 @@
+.meal-plan {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.meal-option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.meal-radio {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.meal-radio input[type="radio"] {
+  display: none;
+}
+
+.radio-mark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6A4C93;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+}
+
+.meal-radio input[type="radio"]:checked + .radio-mark::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #6A4C93;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.meal-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.meal-info h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.meal-info p {
+  font-size: 12px;
+  color: #777;
+}
+
+.meal-image {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recipe-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.recipe-button:hover {
+  background-color: #555;
+}
