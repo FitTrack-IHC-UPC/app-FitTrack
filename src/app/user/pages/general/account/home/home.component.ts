@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { AuthService } from '../../../../../core/services/auth.service';
+import { User } from '../../../../../shared/models/user.model';
+import { Router } from '@angular/router';
+
+
 interface Exercise {
   title: string;
   duration: number;
@@ -22,6 +27,11 @@ interface Article {
 
 
 export class HomeComponent {
+  private authService = inject(AuthService);
+  user: User | null = this.authService.currentUser;
+  role = this.user?.role;
+  name = this.user?.name;
+  constructor(private router: Router) { }
   exercises: Exercise[] = [
     { title: 'Squat Exercise', duration: 12, calories: 120, imageUrl: '/assets/images/Exercises/squats.png' },
     { title: 'Full Body Stretching', duration: 12, calories: 120, imageUrl: '/assets/images/Exercises/Stretch.png' },
@@ -35,4 +45,14 @@ export class HomeComponent {
     { title: 'Nutrición Balanceada', imageUrl: '/assets/images/premium-articles/im8.jpg' },
     { title: 'Consejos para Principiantes', imageUrl: '/assets/images/premium-videos/video2.jpg' }
   ];
+
+
+
+  onPremium(): void {
+    if(this.role === 'basic') {
+      this.router.navigate(['/user/basic/subscribe']);
+    }else{
+      this.router.navigate(['/user/subscriber/premium-home']);
+    }
+  }
 }

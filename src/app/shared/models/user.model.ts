@@ -9,11 +9,10 @@ export interface User {
     name: string;
     password: string;
     nickname: string;
-    telephone: string;
     role: 'basic' | 'subscriber';
-    gender: 'masculino' | 'femenino';
+    gender?: 'masculino' | 'femenino';
     profile?: UserProfile;
-    meal_plan: MealPlan;
-    exercise_plan: ExercisePlan[];
-    bills: Bill[];
+    meal_plan?: MealPlan;
+    exercise_plan?: ExercisePlan[];
+    bills?: Bill[];
 }

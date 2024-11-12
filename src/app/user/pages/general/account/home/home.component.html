@@ -1,6 +1,6 @@
 <div class="header-container">
   <div>
-    <h1>Hola, Usuario</h1>
+    <h1>Hola, {{name}}</h1>
     <p>Es hora de desafiar tus límites.</p>
   </div>
   <input type="text" placeholder="Buscar" class="search-bar" />
@@ -21,7 +21,7 @@
       <img src="assets/images/icons/apple.png" alt="Nutrición" />
       <p>Nutrición</p>
     </div>
-    <div class="icon" routerLink="/user/basic/subscribe">
+    <div class="icon" (click)="onPremium()">
       <img src="assets/images/icons/trophy.png" alt="Premium" />
       <p>Premium</p>
     </div>
