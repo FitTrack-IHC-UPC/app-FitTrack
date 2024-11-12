@@ -14,13 +14,7 @@ export class PaymentComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-
-    console.log(this.route.snapshot.paramMap.get('monto'));
-
-    // Intenta convertir el valor a un número
     this.monto = +this.route.snapshot.paramMap.get('amount')!;
-
-    console.log(this.monto);
   }
 
 }

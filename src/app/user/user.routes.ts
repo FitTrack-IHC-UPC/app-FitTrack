@@ -33,9 +33,9 @@ export const UserRoutes: Routes = [
             {
                 path: 'subscriber',
                 children: [
-                    { path: 'premium-articles', component: PremiumArticlesComponent },
+                    { path: 'premium-articles/:id', component: PremiumArticlesComponent },
                     { path: 'premium-home', component: PremiumHomeComponent },
-                    { path: 'premium-videos', component: PremiumVideosComponent },
+                    { path: 'premium-videos/:id', component: PremiumVideosComponent },
                 ]
             },
             //BASIC USER COMPONENTS
