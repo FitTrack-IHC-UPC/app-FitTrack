@@ -1,109 +1,83 @@
-.Titulo{
-
-
-    text-align: center;
-    font-weight: bold;
-    font-size:2.0em;
-    margin-top:30px;
-
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
 }
 
-.Titulo2{
-
-    text-align: center;
-    font-weight: bold;
-    font-size:2.0em;
-
-    margin-top: 80px;
+.login-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
 }
 
-.Cuadro{
-
-    background-color: #896cfe;
-    margin-top:50px;
-    display:flex;
-
-}
-.cajatexto{
-
-    background-color: #896cfe;
-    margin-left:200px;
-    margin-top:40px;
-    display:flex;
-}
-.Cuadro2{
-
-    background-color: #896cfe;
-    display:flex;
-
-}
-.cajatexto2{
-
-    background-color: #896cfe;
-    margin-top:100px;
-    margin-left:120px;
-    display:flex;
-}
-.Cuadro3{
-
-    background-color: #896cfe;
-    display:flex;
-
-}
-.cajatexto3{
-
-    background-color: #896cfe;
-    margin-top:40px;
-    margin-left:350px;
-    display:flex;
-}
-.Cuadro4{
-
-    background-color: #896cfe;
-    display:flex;
-
-}
-.cajatexto4{
-
-    background-color: #896cfe;
-    margin-left:100px;
-    margin-top:40px;
-    display:flex;
-}
-.Nombre{
-
-    margin-top:30px;
-    margin-left:300px;
-    color:white;
-
+.login-image {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 40px;
 }
 
-.Email{
-    margin-top:40px;
-    color:white;
-    margin-left: 300px;
-    
+.login-image img {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.Contraseña{
-
-    margin-top:10px;
-    margin-left:400px;
-    color:white;
-
-
+.image-overlay-text {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-.Confirmar{
-     margin-top:10px;
-     margin-left:300px;
-    color:white;
+.login-form {
+  padding: 20px;
 }
 
+.form-field {
+  margin-bottom: 20px;
+}
 
-input{
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    background-color: black;
-    color:white;
+.submit-button {
+  background-color: #896cfe;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
 }

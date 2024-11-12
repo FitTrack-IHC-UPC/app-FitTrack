@@ -1,1 +1,61 @@
-<p>home works!</p>
+<div class="header-container">
+  <div>
+    <h1>Hola, {{name}}</h1>
+    <p>Es hora de desafiar tus límites.</p>
+  </div>
+  <input type="text" placeholder="Buscar" class="search-bar" />
+</div>
+
+<div class="home-container">
+  <!-- Iconos de navegación -->
+  <div class="nav-icons">
+    <div class="icon" routerLink="/user/exercise/exercise-home">
+      <img src="assets/images/icons/pesa.png" alt="Ejercicio" />
+      <p>Ejercicio</p>
+    </div>
+    <div class="icon" routerLink="/user/exercise/exercise-progress">
+      <img src="assets/images/icons/clipboard.png" alt="Seguimiento" />
+      <p>Progreso <br> Seguimiento</p>
+    </div>
+    <div class="icon" routerLink="/user/nutrition/food-preference">
+      <img src="assets/images/icons/apple.png" alt="Nutrición" />
+      <p>Nutrición</p>
+    </div>
+    <div class="icon" (click)="onPremium()">
+      <img src="assets/images/icons/trophy.png" alt="Premium" />
+      <p>Premium</p>
+    </div>
+  </div>
+
+  <!-- Ejercicios recomendados -->
+  <div class="section-header">
+    <h2>Ejercicios recomendados</h2>
+    <a routerLink="/user/exercise/exercise-home" class="view-all">
+      Ver Todos <span class="triangle">▶</span>
+    </a>
+  </div>
+  <div class="card-container">
+    <!-- Ejercicios Cards -->
+    <div class="exercise-card" *ngFor="let exercise of exercises">
+      <img [src]="exercise.imageUrl" alt="{{ exercise.title }}" />
+      <h3>{{ exercise.title }}</h3>
+      <p>{{ exercise.duration }} Minutes</p>
+      <p>{{ exercise.calories }} Kcal</p>
+    </div>
+  </div>
+
+  <!-- Artículos y Consejos -->
+  <div class="section-header">
+    <h2>Artículos y Consejos</h2>
+    <a routerLink="/user/subscriber/premium-home" class="view-all">
+      Ver Más <span class="triangle">▶</span>
+    </a>
+  </div>
+  <div class="card-container">
+    <!-- Artículos Cards -->
+    <div class="article-card" *ngFor="let article of articles">
+      <img [src]="article.imageUrl" alt="{{ article.title }}" />
+      <h3>{{ article.title }}</h3>
+    </div>
+  </div>
+</div>
