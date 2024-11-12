@@ -1,1 +1,29 @@
-<p>exercise-home works!</p>
+<app-exercise-header (search)="filterExercises($event)"></app-exercise-header>
+
+<div class="difficulty-buttons">
+  <button *ngFor="let level of levels" (click)="setLevel(level)" [ngClass]="{ active: selectedLevel === level }">
+    {{ level }}
+  </button>
+  <button class="crear-rutina-button">
+    <a routerLink="/user/exercise/exercise-routine-create" class="button-link">Crear Rutina</a>
+  </button>
+</div>
+
+<app-exercise-card-big *ngIf="featuredExercise" [exercise]="featuredExercise" (click)="goToExerciseVideo(featuredExercise)"></app-exercise-card-big>
+
+<h2>Ejercicios {{ selectedLevel }}</h2>
+<h3>Explora Diferentes Estilos De Entrenamiento</h3>
+
+<h3 *ngIf="!filteredExercises.length">No hay ejercicios con ese nombre.</h3>
+
+<div class="exercise-list">
+  <app-exercise-card *ngFor="let exercise of filteredExercises" [exercise]="exercise" (click)="goToExerciseVideo(exercise)"></app-exercise-card>
+</div>
+
+
+
+
+
+
+
+
