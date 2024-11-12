@@ -1,5 +1,5 @@
 # FittrackWeb
-<h1>Colaboradores: </h1>
+<h2>Colaboradores: </h2>
 - De Cossio Velasquez, Alvaro Manuel
 <br>
 - Chipana Rios Andre Angel
@@ -7,8 +7,10 @@
 - Saavedra Cerveza Sergio Andres
 <br>
 - Coaguila Fuentes, Edison Jean Franco
-<br>
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+
+
+
+# This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
 ## Development server
 
