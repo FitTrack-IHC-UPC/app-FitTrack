@@ -7,6 +7,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   templateUrl: './user-layout.component.html',
   styleUrl: './user-layout.component.css'
 })
+
 export class UserLayoutComponent {
 
 }
