@@ -1,0 +1,109 @@
+.Titulo{
+
+
+    text-align: center;
+    font-weight: bold;
+    font-size:2.0em;
+    margin-top:30px;
+
+}
+
+.Titulo2{
+
+    text-align: center;
+    font-weight: bold;
+    font-size:2.0em;
+
+    margin-top: 80px;
+}
+
+.Cuadro{
+
+    background-color: #896cfe;
+    margin-top:50px;
+    display:flex;
+
+}
+.cajatexto{
+
+    background-color: #896cfe;
+    margin-left:200px;
+    margin-top:40px;
+    display:flex;
+}
+.Cuadro2{
+
+    background-color: #896cfe;
+    display:flex;
+
+}
+.cajatexto2{
+
+    background-color: #896cfe;
+    margin-top:100px;
+    margin-left:120px;
+    display:flex;
+}
+.Cuadro3{
+
+    background-color: #896cfe;
+    display:flex;
+
+}
+.cajatexto3{
+
+    background-color: #896cfe;
+    margin-top:40px;
+    margin-left:350px;
+    display:flex;
+}
+.Cuadro4{
+
+    background-color: #896cfe;
+    display:flex;
+
+}
+.cajatexto4{
+
+    background-color: #896cfe;
+    margin-left:100px;
+    margin-top:40px;
+    display:flex;
+}
+.Nombre{
+
+    margin-top:30px;
+    margin-left:300px;
+    color:white;
+
+}
+
+.Email{
+    margin-top:40px;
+    color:white;
+    margin-left: 300px;
+    
+}
+
+.Contraseña{
+
+    margin-top:10px;
+    margin-left:400px;
+    color:white;
+
+
+}
+
+.Confirmar{
+     margin-top:10px;
+     margin-left:300px;
+    color:white;
+}
+
+
+input{
+
+
+    background-color: black;
+    color:white;
+}
