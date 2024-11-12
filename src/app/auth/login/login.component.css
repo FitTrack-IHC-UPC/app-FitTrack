@@ -1,0 +1,126 @@
+.PonerCuenta{
+
+  font-size: 1.5em;
+  margin-top:50px;
+  text-align: center;
+  font-weight: bold;
+
+  }
+
+
+  .Fondo2{
+
+
+
+      background-color: #896cfe;
+      margin-top:20px;
+      display:flex;
+
+  }
+  .Fondo3{
+      background-color: #896cfe;
+      display:flex;
+
+
+  }
+  .Fondo4{
+
+      background-color: #896cfe;
+      display: flex;
+  }
+
+  .cajatext{
+
+      background-color: black;
+      border-radius: 30px;
+
+      margin-top:50px;
+  }
+
+  .cajatext2{
+
+
+      margin-top:100px;
+      margin-left:30px;
+
+  }
+  .Bienvenida{
+
+     font-weight: bold;
+     font-size:15px;
+     margin-top:150px;
+     text-align: center;
+
+
+
+  }
+  .Usuario{
+
+      margin-top:30px;
+
+      margin-left: 300px;
+
+      color:white;
+
+  }
+
+  .Contraseña1{
+
+      margin-top:50px;
+
+      margin-left:300px;
+      color:white;
+
+  }
+
+  .Boton{
+
+      background-color:#896cfe;
+      font-weight: bold;
+      margin-left:1300px;
+      color:white;
+      border:0;
+      cursor:pointer;
+
+  }
+
+  .Boton a {
+        text-decoration: none;
+        color:white;
+  }
+  input{
+
+
+      padding: 0.30px;
+      background: black;
+      width: 300px;
+      color:white;
+      border-radius: 0.50px;
+  }
+
+  .Entrar{
+
+      margin-top: 30px;
+      margin-left: 700px;
+      border-radius: 30px;
+      background-color:white;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.0em;
+      height: 40px;
+      width: 100px;
+
+      transition: background-color 1s ease;
+
+  }
+
+  .Entrar:hover{
+
+     background-color: gray;
+  }
+
+  .Entrar a{
+
+        text-decoration: none;
+        color:black;
+  }

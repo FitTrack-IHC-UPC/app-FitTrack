@@ -1,0 +1,119 @@
+.exercise-routine {
+  padding: 20px;
+}
+
+.round {
+  margin-bottom: 20px;
+}
+
+.exercise-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  min-height: 100px;
+}
+
+.exercise-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  max-width: 550px;
+  border: 2px solid black;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  position: relative; /* To position delete button */
+}
+
+.exercise-card:hover {
+  transform: scale(1.05);
+  border-color: #896CFE;
+}
+
+.card-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.card-info h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-info .details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.0rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.card-info .details p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.card-info .details img.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.card-image {
+  width: 180px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+.start-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-more-exercises {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}

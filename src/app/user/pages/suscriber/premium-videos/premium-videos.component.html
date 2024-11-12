@@ -1,1 +1,21 @@
-<p>premium-videos works!</p>
+<div class="principal">
+  <app-header label="◀ Rutinas para ti" text="user/subscriber/premium-home"></app-header>
+  <div class="container">
+    <div class="title">
+      <h6>{{ video!.title }}</h6>
+    </div>
+    <div class="description">
+      <p>Duración: {{ video!.time }} minutos.</p>
+      <p>Calorías: {{ video!.calories }}</p>
+      <p>Repeticiones: {{ video!.repetitions }}</p>
+    </div>
+    <div class="custom-video-wrapper">
+      <iframe
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        [src]="video!.video_link | safeUrl">
+      </iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<app-exercise-header></app-exercise-header>
+
+<div class="exercise-page">
+  <div *ngIf="exercise">
+    <div class="exercise-image-container">
+      <img [src]="exercise.imageUrl" [alt]="exercise.title" />
+      <div class="play-button-overlay">
+        <img src="assets/images/icons/Play.png" alt="Play" />
+      </div>
+    </div>
+
+    <div class="exercise-info-card">
+      <h2 class="exercise-title">{{ exercise.title }}</h2>
+      <div class="details">
+        <p>
+          <img src="assets/images/icons/time.png" alt="Time" /> {{ exercise.duration }} Minutos
+        </p>
+        <p>
+          <img src="assets/images/icons/calories.png" alt="Calories" /> {{ exercise.calories }} Kcal
+        </p>
+        <p>
+          <img src="assets/images/icons/workout.png" alt="Exercises" /> {{ exercise.reps }} Repeticiones
+        </p>
+      </div>
+    </div>
+
+    <button (click)="onCompleted()" class="completed-button">COMPLETADO</button>
+  </div>
+</div>
