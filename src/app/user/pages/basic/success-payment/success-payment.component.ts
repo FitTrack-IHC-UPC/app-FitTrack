@@ -1,13 +1,12 @@
 import { Component, inject} from '@angular/core';
 import { HeaderComponent } from '../../../../shared/components/header/header.component';
-import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../../core/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-success-payment',
   standalone: true,
-  imports: [HeaderComponent, RouterLink],
+  imports: [HeaderComponent],
   templateUrl: './success-payment.component.html',
   styleUrl: './success-payment.component.css'
 })
