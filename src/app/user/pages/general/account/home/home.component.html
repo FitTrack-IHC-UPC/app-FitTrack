@@ -4,6 +4,12 @@
     <p>Es hora de desafiar tus límites.</p>
   </div>
   <input type="text" placeholder="Buscar" class="search-bar" />
+  <div class="icon" routerLink="/auth/login">
+    <button class="logout" (click)="logOut()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <p>Cerrar Sesión</p>
+    </button>
+  </div>
 </div>
 
 <div class="home-container">
@@ -45,6 +51,7 @@
   </div>
 
   <!-- Artículos y Consejos -->
+  <!--
   <div class="section-header">
     <h2>Artículos y Consejos</h2>
     <a routerLink="/user/subscriber/premium-home" class="view-all">
@@ -52,10 +59,12 @@
     </a>
   </div>
   <div class="card-container">
-    <!-- Artículos Cards -->
+
     <div class="article-card" *ngFor="let article of articles">
       <img [src]="article.imageUrl" alt="{{ article.title }}" />
       <h3>{{ article.title }}</h3>
     </div>
   </div>
+  -->
+
 </div>

@@ -1,7 +1,7 @@
 import { Component, inject, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './../../core/services/auth.service';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
@@ -19,7 +19,8 @@ import { Router } from '@angular/router';
     MatCardModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    RouterModule
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
@@ -62,9 +63,9 @@ export class RegisterComponent implements OnInit {
 
     const credentials = this.loginForm.value;
 
-    this.authService.register(credentials.name, credentials.email, credentials.password, credentials.confirmPassword);
+    const user = this.authService.register(credentials.name, credentials.email, credentials.password, credentials.confirmPassword);
 
-    if(this.authService.currentUser) {
+    if(user) {
       alert('Usuario registrado correctamente');
       this.route.navigate(['/auth/login']);
     }

@@ -31,7 +31,8 @@ export class HomeComponent {
   user: User | null = this.authService.currentUser;
   role = this.user?.role;
   name = this.user?.name;
-  constructor(private router: Router) { }
+
+  constructor(private router: Router) {}
   exercises: Exercise[] = [
     { title: 'Squat Exercise', duration: 12, calories: 120, imageUrl: '/assets/images/Exercises/squats.png' },
     { title: 'Full Body Stretching', duration: 12, calories: 120, imageUrl: '/assets/images/Exercises/Stretch.png' },
@@ -54,5 +55,10 @@ export class HomeComponent {
     }else{
       this.router.navigate(['/user/subscriber/premium-home']);
     }
+  }
+
+  logOut(): void {
+    this.authService.logout();
+    this.router.navigate(['/auth/login']);
   }
 }

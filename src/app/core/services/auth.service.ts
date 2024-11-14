@@ -26,7 +26,19 @@ export class AuthService {
     }
   ]
 
-  constructor() { }
+  constructor() {
+
+    // Recuperar los usuarios de localStorage al iniciar la aplicación
+    const usersFromStorage = localStorage.getItem('users');
+    if (usersFromStorage) {
+      this.users = JSON.parse(usersFromStorage);
+    }
+
+    const userFromStorage = localStorage.getItem('currentUser');
+    if (userFromStorage) {
+      this._currentUser = JSON.parse(userFromStorage);
+    }
+   }
 
   private _currentUser: User | null = null;
 
@@ -38,6 +50,7 @@ export class AuthService {
     const user = this.users.find(user => user.email === email && user.password === password);
     if (user) {
       this._currentUser = user;
+      localStorage.setItem('currentUser', JSON.stringify(user));
     }else{
       alert('Usuario o contraseña incorrectos');
     }
@@ -45,17 +58,18 @@ export class AuthService {
 
   logout(): void {
     this._currentUser = null;
+    localStorage.removeItem('currentUser');
   }
 
-  register(name: string, email: string, password: string, confirmpassword: string): void {
+  register(name: string, email: string, password: string, confirmpassword: string): User | null {
     if (this.users.find(user => user.email === email)) {
       alert('El email ya tiene una cuenta asociada');
-      return;
+      return null;
     }
 
     if(password !== confirmpassword) {
       alert('Las contraseñas no coinciden');
-      return;
+      return null;
     }
 
     const id = this.users.length + 1;
@@ -63,7 +77,11 @@ export class AuthService {
     const nickname = name.toLowerCase();
     const newUser: User = { id, name, email, password, nickname, role};
     this.users.push(newUser);
+    localStorage.setItem('users', JSON.stringify(this.users));
     this._currentUser = newUser;
+    localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+    return newUser;
   }
 
   getUsers(): User[] {
@@ -75,6 +93,8 @@ export class AuthService {
     if (index !== -1) {
       this.users[index] = updatedUser;
       this._currentUser = updatedUser;
+      localStorage.setItem('currentUser', JSON.stringify(updatedUser));
+      localStorage.setItem('users', JSON.stringify(this.users));
     }
   }
 
