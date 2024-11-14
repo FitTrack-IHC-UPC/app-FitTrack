@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../../../shared/components/header/header.component';
 import { ActivatedRoute} from '@angular/router';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-payment',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, RouterModule],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.css'
 })
