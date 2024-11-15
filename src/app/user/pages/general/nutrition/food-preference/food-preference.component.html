@@ -1,95 +1,35 @@
-<div class="meal-preferences">
-  <h3>Preferencias Alimenticias</h3>
-  <p>¿Cuáles son sus preferencias alimenticias?</p>
-  <div class="options">
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegetariano'" (change)="selectPreference('vegetariano')">
-      <span class="checkmark"></span> Vegetariano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'keto'" (change)="selectPreference('keto')">
-      <span class="checkmark"></span> Keto
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegano'" (change)="selectPreference('vegano')">
-      <span class="checkmark"></span> Vegano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'paleo'" (change)="selectPreference('paleo')">
-      <span class="checkmark"></span> Paleo
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'glutenFree'" (change)="selectPreference('glutenFree')">
-      <span class="checkmark"></span> Gluten-Free
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'noPreferences'" (change)="selectPreference('noPreferences')">
-      <span class="checkmark"></span> No preferences
-    </label>
+<div class="preference-container">
+  <div class="column">
+    <div class="mt-5 ml-5" >
+      <h5>Preferencias alimenticias</h5>
+      <p>¿Cuales son tus preferencias alimenticas?</p>
+      <div class="mt-4 ml-5" *ngFor="let alternative of alternatives">
+        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="1"></app-box-checked-radio>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="meal-preferences">
-  <h3>Alergias</h3>
-  <p>¿Tiene alguna alergia alimenticia que debamos conocer?</p>
-  <div class="options">
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegetariano'" (change)="selectPreference('vegetariano')">
-      <span class="checkmark"></span> Vegetariano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'keto'" (change)="selectPreference('keto')">
-      <span class="checkmark"></span> Keto
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegano'" (change)="selectPreference('vegano')">
-      <span class="checkmark"></span> Vegano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'paleo'" (change)="selectPreference('paleo')">
-      <span class="checkmark"></span> Paleo
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'glutenFree'" (change)="selectPreference('glutenFree')">
-      <span class="checkmark"></span> Gluten-Free
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'noPreferences'" (change)="selectPreference('noPreferences')">
-      <span class="checkmark"></span> No preferences
-    </label>
+<div class="mb-5 preference-container">
+  <div class="column">
+    <div class="mt-5 ml-5" >
+      <h5>Alergias</h5>
+      <p>¿Tienes alguna alegia alimenticia?</p>
+      <div class="mt-4 ml-5" *ngFor="let alternative of alternativesAlergias">
+        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="meal-preferences">
-  <h3>Tipos De Comidas</h3>
-  <p>Which meals do you want to plan?</p>
-  <div class="options">
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegetariano'" (change)="selectPreference('vegetariano')">
-      <span class="checkmark"></span> Vegetariano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'keto'" (change)="selectPreference('keto')">
-      <span class="checkmark"></span> Keto
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'vegano'" (change)="selectPreference('vegano')">
-      <span class="checkmark"></span> Vegano
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'paleo'" (change)="selectPreference('paleo')">
-      <span class="checkmark"></span> Paleo
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'glutenFree'" (change)="selectPreference('glutenFree')">
-      <span class="checkmark"></span> Gluten-Free
-    </label>
-    <label class="custom-radio">
-      <input type="radio" name="preferences" [checked]="selectedPreference === 'noPreferences'" (change)="selectPreference('noPreferences')">
-      <span class="checkmark"></span> No preferences
-    </label>
+<div class="mb-5 preference-container">
+  <div class="column">
+    <div class="mt-5 ml-5" >
+      <h5>Tipos de comida</h5>
+      <p>¿Que planes de comida quieres?</p>
+      <div class="mt-4 ml-5" *ngFor="let alternative of alternativesTiposComida">
+        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="3"></app-box-checked-radio>
+      </div>
+    </div>
   </div>
-
-  <button class="next-button" (click)="onNext()">Siguiente</button>
-
 </div>

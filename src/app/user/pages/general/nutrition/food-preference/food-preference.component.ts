@@ -1,10 +1,26 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {BoxCheckedRadioComponent} from './box-checked-radio/box-checked-radio.component';
+import {CommonModule} from '@angular/common';
 
+interface Alternatives{
+  name:string;
+}
+
+interface AlternativesAlergias{
+  name:string;
+}
+
+interface AlternativesTiposComida{
+  name:string;
+}
 @Component({
   selector: 'app-food-preference',
   standalone: true,
-  imports: [],
+  imports: [
+    BoxCheckedRadioComponent,
+    CommonModule
+  ],
   templateUrl: './food-preference.component.html',
   styleUrl: './food-preference.component.css'
 })
@@ -12,6 +28,29 @@ export class FoodPreferenceComponent {
   selectedPreference: string = '';
   selectedMealType: string = '';
   selectedAllergies: string[] = [];
+
+  alternatives: Alternatives[] = [
+    {name:"Vegetario"},
+    {name:"Gluten-free"},
+    {name:"Vegano"},
+    {name:"Keto"},
+    {name:"Paleo"},
+    {name:"No preference"}
+  ]
+  alternativesAlergias: AlternativesAlergias[]=[
+    {name:"Nueces"},
+    {name:"Lacteos"},
+    {name:"Mariscos"},
+    {name:"Huevos"},
+    {name:"Sin alergia"},
+    {name:"Otros"}
+  ]
+  alternativesTiposComida: AlternativesTiposComida[]=[
+    {name:"Desayuno"},
+    {name:"Almuerzo"},
+    {name:"Snacks"},
+    {name:"Cena"}
+  ]
 
   constructor(private router: Router) {}
 
