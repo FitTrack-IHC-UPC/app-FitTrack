@@ -5,10 +5,11 @@ import { Exercise } from '../../../../../shared/models/exercise.model';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { ExerciseHeaderComponent } from '../../../../../shared/components/exercise-header/exercise-header.component';
 import { CdkDragDrop, CdkDropListGroup, moveItemInArray, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 @Component({
   selector: 'app-exercise-routine',
   standalone: true,
-  imports: [NgFor,NgIf,DragDropModule,ExerciseHeaderComponent,CdkDropListGroup],
+  imports: [NgFor,NgIf,DragDropModule,ExerciseHeaderComponent,CdkDropListGroup, FooterComponent],
   templateUrl: './exercise-routine.component.html',
   styleUrl: './exercise-routine.component.css'
 })

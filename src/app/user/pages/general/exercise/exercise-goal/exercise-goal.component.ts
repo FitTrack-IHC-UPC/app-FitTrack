@@ -4,10 +4,11 @@ import { ExerciseHeaderComponent } from '../../../../../shared/components/exerci
 import { Exercise } from '../../../../../shared/models/exercise.model';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { NgIf } from '@angular/common';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 @Component({
   selector: 'app-exercise-goal',
   standalone: true,
-  imports: [ExerciseHeaderComponent,NgIf],
+  imports: [ExerciseHeaderComponent,NgIf, FooterComponent],
   templateUrl: './exercise-goal.component.html',
   styleUrl: './exercise-goal.component.css'
 })

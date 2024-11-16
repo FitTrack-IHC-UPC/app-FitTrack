@@ -5,11 +5,12 @@ import { ExerciseCardComponent } from '../../../../../shared/components/exercise
 import { ExerciseHeaderComponent } from '../../../../../shared/components/exercise-header/exercise-header.component';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { Router , RouterLink} from '@angular/router';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-exercise-routine-create',
   standalone: true,
-  imports: [ExerciseCardComponent, ExerciseHeaderComponent, NgClass, CommonModule],
+  imports: [ExerciseCardComponent, ExerciseHeaderComponent, NgClass, CommonModule, FooterComponent],
   templateUrl: './exercise-routine-create.component.html',
   styleUrls: ['./exercise-routine-create.component.css'],
 })
