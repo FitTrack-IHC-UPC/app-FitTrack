@@ -27,13 +27,13 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  loginForm!: FormGroup;
+  registerForm!: FormGroup;
   private authService = inject(AuthService);
 
   constructor(private fb: FormBuilder, private route: Router) { }
 
   ngOnInit(): void {
-    this.loginForm = this.fb.group({
+    this.registerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
@@ -42,26 +42,26 @@ export class RegisterComponent implements OnInit {
   }
 
   get name() {
-    return this.loginForm.get('name')!;
+    return this.registerForm.get('name')!;
   }
   get email() {
-    return this.loginForm.get('email')!;
+    return this.registerForm.get('email')!;
   }
 
   get password() {
-    return this.loginForm.get('password')!;
+    return this.registerForm.get('password')!;
   }
 
   get confirmPassword() {
-    return this.loginForm.get('confirmPassword')!;
+    return this.registerForm.get('confirmPassword')!;
   }
 
   onSubmit(): void {
-    if(this.loginForm.invalid) {
+    if(this.registerForm.invalid) {
       return;
     }
 
-    const credentials = this.loginForm.value;
+    const credentials = this.registerForm.value;
 
     const user = this.authService.register(credentials.name, credentials.email, credentials.password, credentials.confirmPassword);
 
