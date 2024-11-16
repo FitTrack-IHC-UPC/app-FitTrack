@@ -1,9 +1,13 @@
-.preferences-container {
+.preferenceFlex-container {
+  padding: 20px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.preference-container{
+  max-width: 18rem;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-}

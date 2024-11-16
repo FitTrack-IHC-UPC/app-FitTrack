@@ -1,35 +1,33 @@
-<div class="preference-container">
-  <div class="column">
-    <div class="mt-5 ml-5" >
-      <h5>Preferencias alimenticias</h5>
-      <p>¿Cuales son tus preferencias alimenticas?</p>
-      <div class="mt-4 ml-5" *ngFor="let alternative of alternatives">
-        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="1"></app-box-checked-radio>
-      </div>
+<section class="mt-5 preferenceFlex-container">
+  <div class="card border-info mb-3 preference-container">
+    <div class="column ">
+        <h6 class="card-header">Preferencias alimenticias</h6>
+        <p class="ml-5">¿Cuales son tus preferencias alimenticas?</p>
+        <div class="mb-2" *ngFor="let alternative of alternatives">
+          <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="1"></app-box-checked-radio>
+        </div>
     </div>
   </div>
-</div>
 
-<div class="mb-5 preference-container">
-  <div class="column">
-    <div class="mt-5 ml-5" >
-      <h5>Alergias</h5>
-      <p>¿Tienes alguna alegia alimenticia?</p>
-      <div class="mt-4 ml-5" *ngFor="let alternative of alternativesAlergias">
-        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
+  <div class="card border-info mb-3 preference-container">
+    <div class="column">
+        <h5 class="card-header">Alergias</h5>
+        <p class="ml-5">¿Tienes alguna alegia alimenticia?</p>
+        <div class="mb-2"  *ngFor="let alternative of alternativesAlergias">
+          <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
       </div>
     </div>
   </div>
-</div>
 
-<div class="mb-5 preference-container">
-  <div class="column">
-    <div class="mt-5 ml-5" >
-      <h5>Tipos de comida</h5>
-      <p>¿Que planes de comida quieres?</p>
-      <div class="mt-4 ml-5" *ngFor="let alternative of alternativesTiposComida">
-        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="3"></app-box-checked-radio>
+  <div class="card border-info mb-3 preference-container">
+    <div class="column">
+      <div>
+        <h5 class="card-header">Tipos de comida</h5>
+        <p class="ml-5">¿Que planes de comida quieres?</p>
+        <div class="mt-4 ml-5" *ngFor="let alternative of alternativesTiposComida">
+          <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="3"></app-box-checked-radio>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
