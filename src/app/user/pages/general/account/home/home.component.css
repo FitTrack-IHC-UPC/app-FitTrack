@@ -1,0 +1,137 @@
+.logo {
+  width: 400px;
+  height: 200px;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.home-container {
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header con barra de búsqueda alineada a la derecha */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Añadir un ancho máximo */
+  margin: 0 auto 24px; /* Centrado */
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.search-bar {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 500px;
+}
+
+/* Iconos de navegación */
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.icon {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.logout {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s transform 0.2s;
+  background: none;
+  border: none;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.view-all, .view-more {
+  display: flex;
+  align-items: center;
+  color: black; /* Color amarillo */
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.view-all:hover, .view-more:hover {
+  color: #cef056; /* Color amarillo oscuro en hover */
+}
+
+.triangle {
+  font-size: 1.2em;
+  margin-left: 4px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Estilo de las tarjetas y efecto hover */
+.exercise-card,
+.article-card {
+  width: 23%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #f9f9f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.exercise-card:hover,
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exercise-card img,
+.article-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
