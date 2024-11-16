@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-meal-plan',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './meal-plan.component.html',
   styleUrl: './meal-plan.component.css'
 })

@@ -15,6 +15,6 @@ export class ExerciseProgressComponent {
   constructor(private router: Router) {}
 
   navigateHome(): void {
-    this.router.navigate(['/home']); // Replace '/home' with the actual path to your home route
+    this.router.navigate(['/user/home']);
   }
 }
