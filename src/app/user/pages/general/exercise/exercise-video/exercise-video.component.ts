@@ -4,11 +4,12 @@ import { Exercise } from '../../../../../shared/models/exercise.model';
 import { ExerciseHeaderComponent } from '../../../../../shared/components/exercise-header/exercise-header.component';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { NgIf } from '@angular/common';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-exercise-video',
   standalone: true,
-  imports: [ExerciseHeaderComponent,NgIf,  ],
+  imports: [ExerciseHeaderComponent,NgIf, FooterComponent],
   templateUrl: './exercise-video.component.html',
   styleUrl: './exercise-video.component.css'
 })
