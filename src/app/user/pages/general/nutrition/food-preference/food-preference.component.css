@@ -10,4 +10,9 @@
 .preference-container{
   max-width: 18rem;
 }
+.my-button{
+  position: absolute;
+  margin: auto;
+  left: 1120px;
 
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {BoxCheckedRadioComponent} from './box-checked-radio/box-checked-radio.component';
 import {CommonModule} from '@angular/common';
+import {ExerciseHeaderComponent} from '../../../../../shared/components/exercise-header/exercise-header.component';
 
 interface Alternatives{
   name:string;
@@ -19,7 +20,8 @@ interface AlternativesTiposComida{
   standalone: true,
   imports: [
     BoxCheckedRadioComponent,
-    CommonModule
+    CommonModule,
+    ExerciseHeaderComponent
   ],
   templateUrl: './food-preference.component.html',
   styleUrl: './food-preference.component.css'
