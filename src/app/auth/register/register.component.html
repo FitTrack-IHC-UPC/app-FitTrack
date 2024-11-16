@@ -1,6 +1,6 @@
-<section class="login-container">
-  <div class="login-card">
-    <div class="login-image">
+<section class="register-container">
+  <div class="register-card">
+    <div class="register-image">
       <div class="image-overlay-text">
 
 
@@ -9,9 +9,9 @@
       </div>
     </div>
 
-    <div class="login-form">
+    <div class="register-form">
       <h2>Crear cuenta</h2>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
         <div class="form-field">
           <label for="name">Nombre</label>
@@ -66,8 +66,9 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-button" [disabled]="loginForm.invalid">Crear Cuenta</button>
-        <div class="login-link">
+        <button type="submit" class="submit-button" [disabled]="registerForm.invalid">Crear Cuenta</button>
+
+        <div class="register-link">
           <p>¿Ya tienes una cuenta? <a routerLink="/auth/login">Inicia sesión</a></p>
         </div>
       </form>

@@ -13,7 +13,7 @@
     <div class="column">
         <h5 class="card-header">Alergias</h5>
         <p class="ml-5">¿Tienes alguna alegia alimenticia?</p>
-        <div class="mb-2"  *ngFor="let alternative of alternativesAlergias">
+        <div class="mb-2"  *NgFor="let alternative of alternativesAlergias">
           <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
       </div>
     </div>
@@ -24,7 +24,7 @@
       <div>
         <h5 class="card-header">Tipos de comida</h5>
         <p class="ml-5">¿Que planes de comida quieres?</p>
-        <div class="mt-4 ml-5" *ngFor="let alternative of alternativesTiposComida">
+        <div class="mt-4 ml-5" *NgFor="let alternative of alternativesTiposComida">
           <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="3"></app-box-checked-radio>
         </div>
       </div>

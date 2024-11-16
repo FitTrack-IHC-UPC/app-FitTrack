@@ -98,4 +98,17 @@ export class AuthService {
     }
   }
 
+  resetPassword(email: string, newPassword: string, confirmPassword: string): User | null {
+    const user = this.users.find(user => user.email === email);
+    if (user && newPassword == confirmPassword) {
+      user.password = newPassword;
+      localStorage.setItem('users', JSON.stringify(this.users));
+      alert('Contraseña actualizada correctamente');
+      return user;
+    } else {
+      alert('Usuario o contraseña incorrectos');
+      return null;
+    }
+  }
+
 }
