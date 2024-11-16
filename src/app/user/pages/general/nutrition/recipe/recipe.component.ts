@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ExerciseHeaderComponent} from '../../../../../shared/components/exercise-header/exercise-header.component';
 
 @Component({
   selector: 'app-recipe',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ExerciseHeaderComponent],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.css'
 })

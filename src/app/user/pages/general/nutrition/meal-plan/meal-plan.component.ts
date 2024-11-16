@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import { NgFor } from '@angular/common';
+import {ExerciseHeaderComponent} from '../../../../../shared/components/exercise-header/exercise-header.component';
 
 @Component({
   selector: 'app-meal-plan',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ExerciseHeaderComponent],
   templateUrl: './meal-plan.component.html',
   styleUrl: './meal-plan.component.css'
 })

@@ -1,3 +1,4 @@
+<app-exercise-header></app-exercise-header>
 <div class="recipe-detail">
   <h1>{{ recipe.title }}</h1>
   <div class="recipe-info">
@@ -12,7 +13,7 @@
   <div class="recipe-section">
     <h2>Ingredients</h2>
     <ul>
-      <li *NgFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+      <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
     </ul>
   </div>
 
