@@ -11,3 +11,23 @@
   max-width: 18rem;
 }
 
+/* food-button */
+.food-button {
+  display: block;
+  width: 90%;
+  max-width: 250px;
+  max-width: 2  0px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #beca56;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.food-button:hover {
+  background: #d9d9d9;
+}

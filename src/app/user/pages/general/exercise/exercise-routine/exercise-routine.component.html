@@ -1,7 +1,7 @@
 <app-exercise-header></app-exercise-header>
 <div class="exercise-routine">
   <h1>Tu Rutina</h1>
-  <h3>Arrastra los ejercicios entre rutinas</h3>
+  <h3>Arrastra los ejercicios entre rondas</h3>
   <div cdkDropListGroup>
     <div *ngFor="let round of rounds; let roundIndex = index" class="round">
       <h2>Round {{ roundIndex + 1 }}</h2>
@@ -47,7 +47,7 @@
       *ngIf="rounds.length > 0"
       class="add-routine-btn"
       (click)="addRoutine()"
-    >+ Añadir Rutina</button>
+    >+ Añadir Ronda</button>
   </div>
 
   <button *ngIf="selectedExercises.length > 0" class="start-btn" (click)="startRoutine()">Empezar</button>
