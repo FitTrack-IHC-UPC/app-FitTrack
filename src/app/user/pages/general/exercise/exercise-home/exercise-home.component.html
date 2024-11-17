@@ -1,6 +1,7 @@
 <app-exercise-header (search)="filterExercises($event)"></app-exercise-header>
 
 <div class="difficulty-buttons">
+  <h4>Filtro:</h4>
   <button *ngFor="let level of levels" (click)="setLevel(level)" [ngClass]="{ active: selectedLevel === level }">
     {{ level }}
   </button>

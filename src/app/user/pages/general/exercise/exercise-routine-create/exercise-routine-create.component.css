@@ -1,6 +1,6 @@
 .difficulty-buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
   background-color: #896CFE;
   padding-bottom: 15px;
 }
@@ -25,7 +25,6 @@
   background-color: #555;
 }
 
-
 h2 {
   text-align: center;
   font-size: 1.5rem;
@@ -40,6 +39,11 @@ h3 {
   padding-left: 200px;
 }
 
+h4{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 .exercise-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
