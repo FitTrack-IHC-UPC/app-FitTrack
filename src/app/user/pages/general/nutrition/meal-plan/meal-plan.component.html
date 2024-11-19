@@ -1,6 +1,7 @@
-<div class="meal-plan">
-  <h2>Plan De Desayuno Para Ti</h2>
+<app-exercise-header></app-exercise-header>
 
+<h2>Plan De Desayuno Para Ti</h2>
+<section class="meal-plan">
   <div class="meal-option" *ngFor="let meal of meals; let i = index">
     <label class="meal-radio">
       <input type="radio" name="meal" [value]="meal" [checked]="selectedMeal === meal" (change)="selectMeal(meal)">
@@ -15,6 +16,5 @@
       <img [src]="meal.image" alt="{{ meal.title }}" class="meal-image">
     </div>
   </div>
-
-  <button class="recipe-button" (click)="viewRecipe()">Ver Receta</button>
-</div>
+</section>
+<button class="recipe-button" (click)="viewRecipe()">Ver Receta</button>

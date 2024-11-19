@@ -1,20 +1,21 @@
+<app-exercise-header></app-exercise-header>
 <section class="mt-5 preferenceFlex-container">
   <div class="card border-info mb-3 preference-container">
     <div class="column ">
-        <h6 class="card-header">Preferencias alimenticias</h6>
-        <p class="ml-5">¿Cuales son tus preferencias alimenticas?</p>
-        <div class="mb-2" *ngFor="let alternative of alternatives">
-          <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="1"></app-box-checked-radio>
-        </div>
+      <h6 class="card-header">Preferencias alimenticias</h6>
+      <p class="ml-5">¿Cuales son tus preferencias alimenticas?</p>
+      <div class="mb-2" *ngFor="let alternative of alternatives">
+        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="1"></app-box-checked-radio>
+      </div>
     </div>
   </div>
 
   <div class="card border-info mb-3 preference-container">
     <div class="column">
-        <h5 class="card-header">Alergias</h5>
-        <p class="ml-5">¿Tienes alguna alegia alimenticia?</p>
-        <div class="mb-2"  *ngFor="let alternative of alternativesAlergias">
-          <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
+      <h5 class="card-header">Alergias</h5>
+      <p class="ml-5">¿Tienes alguna alegia alimenticia?</p>
+      <div class="mb-2"  *ngFor="let alternative of alternativesAlergias">
+        <app-box-checked-radio [nameAlternative]="alternative.name" [nameIdAlternative]="2"></app-box-checked-radio>
       </div>
     </div>
   </div>
@@ -31,7 +32,5 @@
     </div>
   </div>
 </section>
+<button (click)=onNext() type="button" class="my-button btn btn-dark">Siguiente</button>
 
-<div class="food-button-container">
-  <button class="food-button" (click)="onNext()">Mostrar Recetas</button>
-</div>

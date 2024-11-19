@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, Router, RouterLink} from '@angular/router';
 import { NgFor } from '@angular/common';
+import {ExerciseHeaderComponent} from '../../../../../shared/components/exercise-header/exercise-header.component';
 
 @Component({
   selector: 'app-meal-plan',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ExerciseHeaderComponent, RouterLink],
   templateUrl: './meal-plan.component.html',
   styleUrl: './meal-plan.component.css'
 })
@@ -15,13 +16,13 @@ export class MealPlanComponent {
       title: 'Delicias Con Yogurt Griego',
       time: '6 Minutes',
       calories: 200,
-      image: 'https://via.placeholder.com/80'
+      image: 'src/assets/images/Recetas/images1.png'
     },
     {
       title: 'Tortilla De Espinacas Y Tomate',
       time: '10 Minutes',
       calories: 220,
-      image: 'https://via.placeholder.com/80'
+      image: 'images2.jpeg'
     },
     {
       title: 'Tostada De Palta Y Huevo',
@@ -48,4 +49,5 @@ export class MealPlanComponent {
   viewRecipe() {
     this.router.navigate(['user/nutrition/recipe']);
   }
+
 }
