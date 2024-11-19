@@ -1,9 +1,9 @@
 import { Component, inject} from '@angular/core';
-import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../../../core/services/auth.service';
 import { User } from '../../../../../shared/models/user.model';
 import { Router } from '@angular/router';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 
 
 interface Exercise {
@@ -20,11 +20,10 @@ interface Article {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor,RouterLink],
+  imports: [RouterLink,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-
 
 export class HomeComponent {
   private authService = inject(AuthService);
@@ -46,8 +45,6 @@ export class HomeComponent {
     { title: 'Nutrición Balanceada', imageUrl: '/assets/images/premium-articles/im8.jpg' },
     { title: 'Consejos para Principiantes', imageUrl: '/assets/images/premium-videos/video2.jpg' }
   ];
-
-
 
   onPremium(): void {
     if(this.role === 'basic') {

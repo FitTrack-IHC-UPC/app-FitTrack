@@ -6,10 +6,11 @@ import { ExerciseHeaderComponent } from '../../../../../shared/components/exerci
 import { ExerciseCardBigComponent } from '../../../../../shared/components/exercise-card-big/exercise-card-big.component';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { RouterLink, Router } from '@angular/router';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 @Component({
   selector: 'app-exercise-home',
   standalone: true,
-  imports: [ExerciseCardComponent,ExerciseHeaderComponent,ExerciseCardBigComponent,NgClass,CommonModule,RouterLink],
+  imports: [ExerciseCardComponent,ExerciseHeaderComponent,ExerciseCardBigComponent,NgClass,CommonModule,RouterLink,FooterComponent],
   templateUrl: './exercise-home.component.html',
   styleUrl: './exercise-home.component.css'
 })

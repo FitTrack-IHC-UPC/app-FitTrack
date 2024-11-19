@@ -3,17 +3,17 @@
   <!-- Profile Section -->
 <div class="profile-section">
   <div class="profile-image">
-    <img src="/assets/images/Exercises/Face.png" alt="User Profile" />
+    <img [src]="userImage" alt="User Profile" />
   </div>
   <div class="profile-info">
     <div class="profile-row">
-      <span class="label bold">Nombre:</span>
-      <span class="value">Madison</span>
+      <span class="label bold">Nombre: </span>
+      <span class="value">{{name}}</span>
     </div>
     <div class="profile-row">
       <span class="label bold">Edad:</span>
       <span class="value">28</span>
-      <span class="gender-symbol">♀</span>
+      <span class="gender-symbol"> {{genderSymbol}} </span>
     </div>
     <div class="profile-row">
       <span class="label bold">75 Kg</span>
@@ -35,10 +35,10 @@
     <h2>Mi Progreso</h2>
     <div class="progress-bars">
       <div class="progress-bar" *ngFor="let day of ['Lun', 'Mar', 'Mie', 'Jue', 'Vie']; let i = index">
-        <span class="calorie-label">{{ 150 + i * 10 }} Kcal</span>
+        <span class="calorie-label">{{ 150 + i * 15 }} Kcal</span>
         <div class="bar-container">
           <div class="empty-bar"></div>
-          <div class="filled-bar" [style.height]="(150 + i * 10) / 170 * 100 + '%'"></div>
+          <div class="filled-bar" [style.height]="(150 + i * 15) / 200 * 100 + '%'"></div>
         </div>
         <span class="day-label">{{ day }}</span>
       </div>
@@ -47,7 +47,7 @@
 
   <!-- Activities Section -->
   <div class="activities-section">
-    <h2>Actividades</h2>
+    <h2>Actividades Recientes</h2>
     <div class="activity-card">
       <div class="activity-image">
         <img src="/assets/images/icons/dude.png" alt="Running" />
@@ -83,3 +83,5 @@
   <!-- Home Button -->
   <button class="home-btn" (click)="navigateHome()">Home</button>
 </div>
+
+<app-footer></app-footer>

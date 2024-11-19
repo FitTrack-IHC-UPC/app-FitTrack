@@ -1,3 +1,4 @@
+import { FooterComponent } from './../../../../shared/components/footer/footer.component';
 import { Component, inject} from '@angular/core';
 import { HeaderComponent } from '../../../../shared/components/header/header.component';
 //Models
@@ -34,7 +35,8 @@ import { NgFor, NgIf} from '@angular/common';
     MatIconModule,
     FormsModule,
     NgFor,
-    NgIf
+    NgIf,
+    FooterComponent
   ],
   templateUrl: './premium-home.component.html',
   styleUrl: './premium-home.component.css'

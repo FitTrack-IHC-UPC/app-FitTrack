@@ -6,16 +6,16 @@ import { Exercise } from '../../shared/models/exercise.model';
 })
 export class ExerciseService {
   private exercises: Exercise[] = [
-    { title: 'Sentadillas Con Barra', duration: 45, reps: 12, calories: 250, imageUrl: 'assets/images/Exercises/weight.png', level: 'Intermedio' },
-    { title: 'Curls de Martillo', duration: 30, reps: 12, calories: 150, imageUrl: 'assets/images/Exercises/pesas.png', level: 'Principiante' },
-    { title: 'Prensa de Pierna', duration: 50, reps: 10, calories: 300, imageUrl: 'assets/images/Exercises/legs.png', level: 'Avanzado' },
-    { title: 'Plancha', duration: 60, reps: 1, calories: 150, imageUrl: 'assets/images/Exercises/plank.png', level: 'Principiante' },
-    { title: 'Press de Pecho', duration: 45, reps: 10, calories: 220, imageUrl: 'assets/images/Exercises/press.png', level: 'Intermedio' },
-    { title: 'Flexiones de Triceps', duration: 30, reps: 12, calories: 180, imageUrl: 'assets/images/Exercises/triceps.png', level: 'Intermedio' },
-    { title: 'Flexiones', duration: 40, reps: 15, calories: 200, imageUrl: 'assets/images/Exercises/flex.png', level: 'Principiante' },
-    { title: 'Correas Suspension TRX', duration: 45, reps: 12, calories: 250, imageUrl: 'assets/images/Exercises/Pulls.png', level: 'Avanzado' },
-    { title: 'Squats', duration: 50, reps: 12, calories: 280, imageUrl: 'assets/images/Exercises/squats.png', level: 'Intermedio' },
-    { title: 'Estiramientos', duration: 30, reps: 1, calories: 100, imageUrl: 'assets/images/Exercises/Stretch.png', level: 'Principiante' }
+    { title: 'Sentadillas Con Barra', duration: 15, reps: 12, calories: 250, imageUrl: 'assets/images/Exercises/weight.png', level: 'Intermedio' },
+    { title: 'Curls de Martillo', duration: 20, reps: 12, calories: 150, imageUrl: 'assets/images/Exercises/pesas.png', level: 'Principiante' },
+    { title: 'Prensa de Pierna', duration: 10, reps: 10, calories: 300, imageUrl: 'assets/images/Exercises/legs.png', level: 'Avanzado' },
+    { title: 'Plancha', duration: 10, reps: 1, calories: 150, imageUrl: 'assets/images/Exercises/plank.png', level: 'Principiante' },
+    { title: 'Press de Pecho', duration: 22, reps: 10, calories: 220, imageUrl: 'assets/images/Exercises/press.png', level: 'Intermedio' },
+    { title: 'Flexiones de Triceps', duration: 16, reps: 12, calories: 180, imageUrl: 'assets/images/Exercises/triceps.png', level: 'Intermedio' },
+    { title: 'Flexiones', duration: 14, reps: 15, calories: 200, imageUrl: 'assets/images/Exercises/flex.png', level: 'Principiante' },
+    { title: 'Correas Suspension TRX', duration: 13, reps: 12, calories: 250, imageUrl: 'assets/images/Exercises/Pulls.png', level: 'Avanzado' },
+    { title: 'Squats', duration: 12, reps: 12, calories: 280, imageUrl: 'assets/images/Exercises/squats.png', level: 'Intermedio' },
+    { title: 'Estiramientos', duration: 10, reps: 1, calories: 100, imageUrl: 'assets/images/Exercises/Stretch.png', level: 'Principiante' }
   ];
 
   private selectedExercises: Exercise[] = [];

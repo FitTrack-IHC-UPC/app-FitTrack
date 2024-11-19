@@ -5,11 +5,12 @@ import { ExerciseCardComponent } from '../../../../../shared/components/exercise
 import { ExerciseHeaderComponent } from '../../../../../shared/components/exercise-header/exercise-header.component';
 import { ExerciseService } from '../../../../../core/services/exercise.service';
 import { Router , RouterLink} from '@angular/router';
+import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-exercise-routine-create',
   standalone: true,
-  imports: [ExerciseCardComponent, ExerciseHeaderComponent, NgClass, CommonModule],
+  imports: [ExerciseCardComponent, ExerciseHeaderComponent, NgClass, CommonModule, FooterComponent],
   templateUrl: './exercise-routine-create.component.html',
   styleUrls: ['./exercise-routine-create.component.css'],
 })
@@ -34,13 +35,22 @@ export class ExerciseRoutineCreateComponent implements OnInit {
     this.filterExercisesByLevel();
   }
 
+  toggleSelection(exercise: Exercise, isFromSelectedList: boolean): void {
+    if (isFromSelectedList) {
+      // Si el ejercicio está en la lista seleccionada, eliminarlo
+      this.selectedExercises = this.selectedExercises.filter(ex => ex !== exercise);
+    } else {
+      // Si el ejercicio está en la lista general, agregar una copia
+      const selectedCopy = { ...exercise };
+      this.selectedExercises.push(selectedCopy);
+    }
+  }
+
   filterExercisesByLevel(): void {
     if (this.selectedLevel === 'Todos') {
-      this.filteredExercises = this.exercises.filter(ex => !ex.isSelected); // Avoid hiding selected exercises
+      this.filteredExercises = this.exercises; // Mostrar todos los ejercicios independientemente de si están seleccionados
     } else {
-      this.filteredExercises = this.exerciseService
-        .getExercisesByLevel(this.selectedLevel as any)
-        .filter(ex => !ex.isSelected); // Avoid hiding selected exercises
+      this.filteredExercises = this.exerciseService.getExercisesByLevel(this.selectedLevel as any);
     }
   }
 
@@ -52,16 +62,6 @@ export class ExerciseRoutineCreateComponent implements OnInit {
         (this.selectedLevel === 'Todos' || ex.level === this.selectedLevel) &&
         !ex.isSelected // Avoid hiding selected exercises
     );
-  }
-
-  toggleSelection(exercise: Exercise): void {
-    exercise.isSelected = !exercise.isSelected;
-    if (exercise.isSelected) {
-      this.selectedExercises.push(exercise);
-    } else {
-      this.selectedExercises = this.selectedExercises.filter(ex => ex !== exercise);
-    }
-    this.filterExercisesByLevel(); // Update the list without removing selected ones
   }
 
   saveAndNavigate(): void {
