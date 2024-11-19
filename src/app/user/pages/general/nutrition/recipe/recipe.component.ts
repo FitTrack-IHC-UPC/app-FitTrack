@@ -32,4 +32,5 @@ export class RecipeComponent {
   saveRecipe() {
     alert('Receta guardada!');
   }
+
 }

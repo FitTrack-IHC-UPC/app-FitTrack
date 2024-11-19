@@ -81,4 +81,5 @@ export class FoodPreferenceComponent {
     this.router.navigate(['/user/nutrition/meal-plan']);
   }
 
+
 }
