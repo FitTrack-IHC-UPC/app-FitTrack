@@ -1,6 +1,7 @@
 <app-exercise-header (search)="filterExercises($event)"></app-exercise-header>
 
 <div class="difficulty-buttons">
+  <h4>Filtro:</h4>
   <button *ngFor="let level of levels" (click)="setLevel(level)" [ngClass]="{ active: selectedLevel === level }">
     {{ level }}
   </button>
@@ -8,22 +9,23 @@
 
 <h2>CREA TU RUTINA</h2>
 <!-- Display selected exercises -->
-<h3>Ejercicios Seleccionados</h3>
+<h3>Haz Click en los Ejercicios Para agregarlos a la Lista</h3>
+<h3>Lista de Ejercicios Seleccionados:</h3>
 <div class="exercise-list">
   <app-exercise-card
     *ngFor="let exercise of selectedExercises"
     [exercise]="exercise"
-    (click)="toggleSelection(exercise)">
+    (click)="toggleSelection(exercise, true)">
   </app-exercise-card>
 </div>
 
-<h3>Explora Diferentes Estilos De Entrenamiento</h3>
+<h3>Explora Diferentes Estilos De Entrenamiento:</h3>
 <!-- Display unselected exercises -->
 <div class="exercise-list">
   <app-exercise-card
     *ngFor="let exercise of filteredExercises"
     [exercise]="exercise"
-    (click)="toggleSelection(exercise)">
+    (click)="toggleSelection(exercise, false)">
   </app-exercise-card>
 </div>
 

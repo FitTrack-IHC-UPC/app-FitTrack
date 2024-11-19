@@ -43,7 +43,7 @@
 
 .gender-symbol {
   margin-left: 10px;
-  font-weight: bolder;
+  font-weight:bolder;
   font-size: larger;
   color: #beca56;
 }
@@ -123,7 +123,7 @@
   color: white;
   padding: 10px;
   margin: 10px 0;
-  width: 150%; /* Adjust width to fit better */
+  width: 100%; /* Adjust width to fit better */
   max-width: 650px; /* Ensure cards don't stretch too wide */
   border-radius: 8px;
 }
@@ -141,6 +141,9 @@
 .activity-info .row {
   display: flex;
   justify-content: space-between; /* Space elements evenly */
+}
+.row>* {
+  width:auto;
 }
 
 .yellow {

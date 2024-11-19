@@ -1,6 +1,7 @@
 <app-exercise-header (search)="filterExercises($event)"></app-exercise-header>
 
 <div class="difficulty-buttons">
+  <h4>Filtro:</h4>
   <button *ngFor="let level of levels" (click)="setLevel(level)" [ngClass]="{ active: selectedLevel === level }">
     {{ level }}
   </button>
@@ -12,7 +13,7 @@
 <app-exercise-card-big *ngIf="featuredExercise" [exercise]="featuredExercise" (click)="goToExerciseVideo(featuredExercise)"></app-exercise-card-big>
 
 <h2>Ejercicios {{ selectedLevel }}</h2>
-<h3>Explora Diferentes Estilos De Entrenamiento</h3>
+<h3>Explora Diferentes Estilos De Entrenamiento:</h3>
 
 <h3 *ngIf="!filteredExercises.length">No hay ejercicios con ese nombre.</h3>
 
