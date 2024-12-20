@@ -1,0 +1,36 @@
+.header-container {
+    background-color: #a396ea;
+    width: 100%;
+    padding: 10px 20px; /* Ajusta los valores según necesites */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  
+  .logout {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s transform 0.2s;
+    background: none;
+    border: none;
+  }
+  
+  .icon {
+    
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }

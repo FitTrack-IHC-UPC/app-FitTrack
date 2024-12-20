@@ -4,7 +4,7 @@ import { AuthService } from '../../../../../core/services/auth.service';
 import { User } from '../../../../../shared/models/user.model';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../../../../../shared/components/footer/footer.component';
-
+import { HomeHeaderComponent } from '../../../../../shared/components/home-header/home-header.component';
 
 interface Exercise {
   title: string;
@@ -20,7 +20,7 @@ interface Article {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink,FooterComponent],
+  imports: [RouterLink,FooterComponent, HomeHeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
