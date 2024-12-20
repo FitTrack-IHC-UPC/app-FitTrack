@@ -67,7 +67,7 @@ export class RegisterComponent implements OnInit {
 
     if(user) {
       alert('Usuario registrado correctamente');
-      this.route.navigate(['/auth/login']);
+      this.route.navigate(['/user/questionnaire/profile-questions']);
     }
   }
 

@@ -3,7 +3,7 @@
     <h1>Hola, {{name}}</h1>
     <p>Es hora de desafiar tus límites.</p>
   </div>
-  <input type="text" placeholder="Buscar" class="search-bar" />
+  
   <div class="icon" routerLink="/auth/login">
     <button class="logout" (click)="logOut()">
       <i class="fa-solid fa-right-from-bracket"></i>
@@ -37,9 +37,7 @@
   <section class="ejercicios-populares">
     <div class="exercise-body">
       <div class="exercise-container">
-        <h1>Ejercicios Populares</h1>
-        <a routerLink="/user/exercise/exercise-home" class="ver-mas">VER MÁS EJERCICIOS <span class="triangulo">▸</span></a>
-
+        <h1>He preparado algunos ejercicios para ti {{name}}</h1>
         <div class="exercises">
           <!-- Treadmill -->
           <div class="exercise-item">
@@ -47,7 +45,7 @@
             <div class="exercise-details">
               <h3>Treadmill</h3>
               <div class="calories">200 est calorías</div>
-              <div class="duration">32:30</div>
+              <div class="duration">32:30 minutos</div>
             </div>
           </div>
 
@@ -57,7 +55,7 @@
             <div class="exercise-details">
               <h3>Estiramientos</h3>
               <div class="calories">110 est calorías</div>
-              <div class="duration">10:02</div>
+              <div class="duration">10:02 minutos</div>
             </div>
           </div>
 
@@ -67,7 +65,7 @@
             <div class="exercise-details">
               <h3>Yoga</h3>
               <div class="calories">144 est calorías</div>
-              <div class="duration">45:12</div>
+              <div class="duration">45:12 minutos</div>
             </div>
           </div>
 
@@ -77,7 +75,7 @@
             <div class="exercise-details">
               <h3>Running</h3>
               <div class="calories">550 est calorías</div>
-              <div class="duration">30:01</div>
+              <div class="duration">30:01 minutos</div>
             </div>
           </div>
 
@@ -87,7 +85,7 @@
             <div class="exercise-details">
               <h3>Pesas</h3>
               <div class="calories">224 est calorías</div>
-              <div class="duration">15:12</div>
+              <div class="duration">15:12 minutos</div>
             </div>
           </div>
 
@@ -97,18 +95,18 @@
             <div class="exercise-details">
               <h3>PushUp</h3>
               <div class="calories">620 est calorías</div>
-              <div class="duration">12:24</div>
+              <div class="duration">12:24 minutos</div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-    </section>
+  </section>
     <!-- Sección de Recetas Populares -->
     <section class="recetas-populares">
       <div class="header-recetas">
-          <h2>Recetas Populares</h2>
-          <a routerLink="/user/nutrition/food-preference" class="ver-mas">VER MÁS RECETAS <span class="triangulo">▸</span></a>
+          <h2>He probado unas recetas deliciosas que quiero compartir contigo {{name}}</h2>
       </div>
       <div class="grid-recetas">
           <div class="receta">
@@ -137,23 +135,6 @@
           </div>
       </div>
   </section>
-
-  <!-- Artículos y Consejos -->
-  <!--
-  <div class="section-header">
-    <h2>Artículos y Consejos</h2>
-    <a routerLink="/user/subscriber/premium-home" class="view-all">
-      Ver Más <span class="triangle">▶</span>
-    </a>
-  </div>
-  <div class="card-container">
-
-    <div class="article-card" *ngFor="let article of articles">
-      <img [src]="article.imageUrl" alt="{{ article.title }}" />
-      <h3>{{ article.title }}</h3>
-    </div>
-  </div>
-  -->
 
 </div>
 <app-footer></app-footer>

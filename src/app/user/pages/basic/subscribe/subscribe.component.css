@@ -33,11 +33,34 @@
   padding-right: 25px;
 }
 
-.content ul li{
-  font-size:x-large;
-  padding-top: 10px;
-  margin-left: 40px;
+.content ul {
+  list-style-type: none; /* Elimina los marcadores predeterminados */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  padding: 0; /* Sin sangría por defecto */
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color del texto */
+  display: grid; /* Usa un grid para distribuir en columnas */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 10px 20px; /* Espaciado entre filas y columnas */
 }
+
+.content ul li {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 10px; /* Espaciado interno para cada elemento */
+  background-color: #f9f9f9; /* Fondo claro para resaltar */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto al interactuar */
+}
+
+.content ul li:hover {
+  background-color: #007BFF; /* Fondo azul al pasar el mouse */
+  color: #fff; /* Texto blanco al pasar el mouse */
+  transform: scale(1.05); /* Agranda ligeramente el elemento */
+}
+
 
 .opciones {
   display: flex;

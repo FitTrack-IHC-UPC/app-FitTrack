@@ -23,6 +23,9 @@ import { ExerciseProgressComponent } from './pages/general/exercise/exercise-pro
 import { FoodPreferenceComponent } from './pages/general/nutrition/food-preference/food-preference.component';
 import { MealPlanComponent } from './pages/general/nutrition/meal-plan/meal-plan.component';
 import { RecipeComponent } from './pages/general/nutrition/recipe/recipe.component';
+//PROFILE-QUESTIONNAIRE COMPONENTS
+import { ProfileQuestionsComponent } from './pages/general/questionnaire/profile-questions/profile-questions.component';
+
 
 export const UserRoutes: Routes = [
     {
@@ -70,6 +73,13 @@ export const UserRoutes: Routes = [
                     { path: 'food-preference', component: FoodPreferenceComponent },
                     { path: 'meal-plan', component: MealPlanComponent },
                     { path: 'recipe', component: RecipeComponent },
+                ]
+            },
+            //PROFILE-QUESTIONNAIRE COMPONENTS
+            {
+                path: 'questionnaire',
+                children: [
+                    { path: 'profile-questions', component: ProfileQuestionsComponent },
                 ]
             }
         ]
