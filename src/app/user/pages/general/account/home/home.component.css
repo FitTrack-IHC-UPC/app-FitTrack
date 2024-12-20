@@ -1,3 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9; /* Cambia según tu preferencia */
+  font-family: Arial, sans-serif;
+}
+
+.header-container {
+  background-color: #BECA56; /* Color del header */
+  width: 100%;
+  padding: 10px 20px; /* Ajusta los valores según necesites */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
 .logo {
   width: 400px;
   height: 200px;

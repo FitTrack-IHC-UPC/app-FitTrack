@@ -1,5 +1,5 @@
 <div class="header-container">
-  <div>
+  <div class>
     <h1>Hola, {{name}}</h1>
     <p>Es hora de desafiar tus límites.</p>
   </div>
@@ -12,129 +12,133 @@
   </div>
 </div>
 
-<div class="home-container">
-  <!-- Iconos de navegación -->
-  <div class="nav-icons">
-    <div class="icon" routerLink="/user/exercise/exercise-home">
-      <img src="assets/images/icons/pesa.png" alt="Ejercicio" />
-      <p>Ejercicio</p>
+<div class="body">
+  
+
+  <div class="home-container">
+    <!-- Iconos de navegación -->
+    <div class="nav-icons">
+      <div class="icon" routerLink="/user/exercise/exercise-home">
+        <img src="assets/images/icons/pesa.png" alt="Ejercicio" />
+        <p>Ejercicio</p>
+      </div>
+      <div class="icon" routerLink="/user/exercise/exercise-progress">
+        <img src="assets/images/icons/clipboard.png" alt="Seguimiento" />
+        <p>Progreso <br> Seguimiento</p>
+      </div>
+      <div class="icon" routerLink="/user/nutrition/food-preference">
+        <img src="assets/images/icons/apple.png" alt="Nutrición" />
+        <p>Nutrición</p>
+      </div>
+      <div class="icon" (click)="onPremium()">
+        <img src="assets/images/icons/trophy.png" alt="Premium" />
+        <p>Premium</p>
+      </div>
     </div>
-    <div class="icon" routerLink="/user/exercise/exercise-progress">
-      <img src="assets/images/icons/clipboard.png" alt="Seguimiento" />
-      <p>Progreso <br> Seguimiento</p>
-    </div>
-    <div class="icon" routerLink="/user/nutrition/food-preference">
-      <img src="assets/images/icons/apple.png" alt="Nutrición" />
-      <p>Nutrición</p>
-    </div>
-    <div class="icon" (click)="onPremium()">
-      <img src="assets/images/icons/trophy.png" alt="Premium" />
-      <p>Premium</p>
-    </div>
-  </div>
 
-  <!-- Sección de Ejercicios Populares -->
-  <section class="ejercicios-populares">
-    <div class="exercise-body">
-      <div class="exercise-container">
-        <h1>He preparado algunos ejercicios para ti {{name}}</h1>
-        <div class="exercises">
-          <!-- Treadmill -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/Treadmill.png" alt="Treadmill">
-            <div class="exercise-details">
-              <h3>Treadmill</h3>
-              <div class="calories">200 est calorías</div>
-              <div class="duration">32:30 minutos</div>
+    <!-- Sección de Ejercicios Populares -->
+    <section class="ejercicios-populares">
+      <div class="exercise-body">
+        <div class="exercise-container">
+          <h1>He preparado algunos ejercicios para ti {{name}}</h1>
+          <div class="exercises">
+            <!-- Treadmill -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/Treadmill.png" alt="Treadmill">
+              <div class="exercise-details">
+                <h3>Treadmill</h3>
+                <div class="calories">200 est calorías</div>
+                <div class="duration">32:30 minutos</div>
+              </div>
             </div>
-          </div>
 
-          <!-- Estiramientos -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/Estiramientos.png" alt="Estiramientos">
-            <div class="exercise-details">
-              <h3>Estiramientos</h3>
-              <div class="calories">110 est calorías</div>
-              <div class="duration">10:02 minutos</div>
+            <!-- Estiramientos -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/Estiramientos.png" alt="Estiramientos">
+              <div class="exercise-details">
+                <h3>Estiramientos</h3>
+                <div class="calories">110 est calorías</div>
+                <div class="duration">10:02 minutos</div>
+              </div>
             </div>
-          </div>
 
-          <!-- Yoga -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/Yoga.png" alt="Yoga">
-            <div class="exercise-details">
-              <h3>Yoga</h3>
-              <div class="calories">144 est calorías</div>
-              <div class="duration">45:12 minutos</div>
+            <!-- Yoga -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/Yoga.png" alt="Yoga">
+              <div class="exercise-details">
+                <h3>Yoga</h3>
+                <div class="calories">144 est calorías</div>
+                <div class="duration">45:12 minutos</div>
+              </div>
             </div>
-          </div>
 
-          <!-- Running -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/Running.png" alt="Running">
-            <div class="exercise-details">
-              <h3>Running</h3>
-              <div class="calories">550 est calorías</div>
-              <div class="duration">30:01 minutos</div>
+            <!-- Running -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/Running.png" alt="Running">
+              <div class="exercise-details">
+                <h3>Running</h3>
+                <div class="calories">550 est calorías</div>
+                <div class="duration">30:01 minutos</div>
+              </div>
             </div>
-          </div>
 
-          <!-- Pesas -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/Pesas.png" alt="Pesas">
-            <div class="exercise-details">
-              <h3>Pesas</h3>
-              <div class="calories">224 est calorías</div>
-              <div class="duration">15:12 minutos</div>
+            <!-- Pesas -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/Pesas.png" alt="Pesas">
+              <div class="exercise-details">
+                <h3>Pesas</h3>
+                <div class="calories">224 est calorías</div>
+                <div class="duration">15:12 minutos</div>
+              </div>
             </div>
-          </div>
 
-          <!-- PushUp -->
-          <div class="exercise-item">
-            <img src="assets/images/Ejercicios/PushUp.png" alt="PushUp">
-            <div class="exercise-details">
-              <h3>PushUp</h3>
-              <div class="calories">620 est calorías</div>
-              <div class="duration">12:24 minutos</div>
+            <!-- PushUp -->
+            <div class="exercise-item">
+              <img src="assets/images/Ejercicios/PushUp.png" alt="PushUp">
+              <div class="exercise-details">
+                <h3>PushUp</h3>
+                <div class="calories">620 est calorías</div>
+                <div class="duration">12:24 minutos</div>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-    <!-- Sección de Recetas Populares -->
-    <section class="recetas-populares">
-      <div class="header-recetas">
-          <h2>He probado unas recetas deliciosas que quiero compartir contigo {{name}}</h2>
-      </div>
-      <div class="grid-recetas">
-          <div class="receta">
-              <img src="assets/images/Recetas/Ensalada_langostinos.png" alt="Receta 1">
-              <h3>Ensalada con Langostinos</h3>
-          </div>
-          <div class="receta">
-              <img src="assets/images/Recetas/Ensalada_pollo.png" alt="Receta 2">
-              <h3>Ensalada con Pollo</h3>
-          </div>
-          <div class="receta">
-              <img src="assets/images/Recetas/Pollo_plancha.png" alt="Receta 3">
-              <h3>Pollo a la Plancha con Verduras</h3>
-          </div>
-          <div class="receta">
-              <img src="assets/images/Recetas/Tostada_salmon.png " alt="Receta 4">
-              <h3>Tostada con Salmón</h3>
-          </div>
-          <div class="receta">
-              <img src="assets/images/Recetas/Sopa_espinaca.png" alt="Receta 5">
-              <h3>Sopa de Espinaca</h3>
-          </div>
-          <div class="receta">
-              <img src="assets/images/Recetas/Saltado_verduras.png" alt="Receta 6">
-              <h3>Salteado de Verduras con Avena</h3>
-          </div>
-      </div>
-  </section>
+    </section>
+      <!-- Sección de Recetas Populares -->
+      <section class="recetas-populares">
+        <div class="header-recetas">
+            <h2>He probado unas recetas deliciosas que quiero compartir contigo {{name}}</h2>
+        </div>
+        <div class="grid-recetas">
+            <div class="receta">
+                <img src="assets/images/Recetas/Ensalada_langostinos.png" routerLink="/user/nutrition/recipe/5" alt="Receta 1">
+                <h3>Ensalada con Langostinos</h3>
+            </div>
+            <div class="receta">
+                <img src="assets/images/Recetas/Ensalada_pollo.png" routerLink="/user/nutrition/recipe/6" alt="Receta 2">
+                <h3>Ensalada con Pollo</h3>
+            </div>
+            <div class="receta">
+                <img src="assets/images/Recetas/Pollo_plancha.png" routerLink="/user/nutrition/recipe/7" alt="Receta 3">
+                <h3>Pollo a la Plancha con Verduras</h3>
+            </div>
+            <div class="receta">
+                <img src="assets/images/Recetas/Tostada_salmon.png " routerLink="/user/nutrition/recipe/8" alt="Receta 4">
+                <h3>Tostada con Salmón</h3>
+            </div>
+            <div class="receta">
+                <img src="assets/images/Recetas/Sopa_espinaca.png" routerLink="/user/nutrition/recipe/9" alt="Receta 5">
+                <h3>Sopa de Espinaca</h3>
+            </div>
+            <div class="receta">
+                <img src="assets/images/Recetas/Saltado_verduras.png" routerLink="/user/nutrition/recipe/10" alt="Receta 6">
+                <h3>Salteado de Verduras con Avena</h3>
+            </div>
+        </div>
+    </section>
 
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>

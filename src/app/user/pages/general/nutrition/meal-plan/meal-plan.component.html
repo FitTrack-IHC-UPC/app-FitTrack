@@ -1,8 +1,8 @@
-<app-exercise-header></app-exercise-header>
+<app-recipe-header></app-recipe-header>
 
 <h2>Plan De Desayuno Para Ti</h2>
 <section class="meal-plan">
-  <div class="meal-option" *ngFor="let meal of meals; let i = index">
+  <div class="meal-option" *ngFor="let meal of recipes; let i = index">
     <label class="meal-radio">
       <input type="radio" name="meal" [value]="meal" [checked]="selectedMeal === meal" (change)="selectMeal(meal)">
       <span class="radio-mark"></span>
@@ -10,11 +10,11 @@
 
     <div class="meal-content">
       <div class="meal-info">
-        <h3>{{ meal.title }}</h3>
+        <h3>{{ meal.name }}</h3>
         <p>{{ meal.time }} | {{ meal.calories }} Cal</p>
       </div>
-      <img [src]="meal.image" alt="{{ meal.title }}" class="meal-image">
+      <img [src]="meal.image" alt="{{ meal.name }}" class="meal-image">
     </div>
   </div>
 </section>
-<button class="recipe-button" (click)="viewRecipe()">Ver Receta</button>
+<button class="recipe-button" (click)="viewRecipe(selectedMeal)">Ver Receta</button>

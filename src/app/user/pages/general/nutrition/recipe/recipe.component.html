@@ -1,24 +1,24 @@
-<app-exercise-header></app-exercise-header>
+<app-recipe-header></app-recipe-header>
 <div class="recipe-detail">
-  <h1>{{ recipe.title }}</h1>
+  <h1>{{ recipe.name }}</h1>
   <div class="recipe-info">
     <span>{{ recipe.time }}</span>
     <span>🌟 {{ recipe.calories }} Cal</span>
   </div>
 
   <div class="recipe-image">
-    <img [src]="recipe.image" alt="{{ recipe.title }}">
+    <img [src]="recipe.image" alt="{{ recipe.name }}">
   </div>
 
   <div class="recipe-section">
-    <h2>Ingredients</h2>
+    <h2>Ingredientes</h2>
     <ul>
       <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
     </ul>
   </div>
 
   <div class="recipe-section">
-    <h2>Preparation</h2>
+    <h2>Preparación</h2>
     <p>{{ recipe.preparation }}</p>
   </div>
 

@@ -1,36 +1,36 @@
 import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ExerciseHeaderComponent} from '../../../../../shared/components/exercise-header/exercise-header.component';
+import { RecipeHeaderComponent } from '../../../../../shared/components/recipe-header/recipe-header.component';
+import { inject } from '@angular/core';
+import { RecipesService } from '../../../../../core/services/recipes.service';
+import { Meal } from '../../../../../shared/models/meal.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe',
   standalone: true,
-  imports: [CommonModule, ExerciseHeaderComponent],
+  imports: [CommonModule, RecipeHeaderComponent],
   templateUrl: './recipe.component.html',
   styleUrl: './recipe.component.css'
 })
 export class RecipeComponent {
-  // Datos de ejemplo de la receta
-  recipe = {
-    title: 'Tostada De Palta Y Huevo',
-    time: '15 Minutes',
-    calories: 150,
-    image: 'https://www.lavanguardia.com/files/image_449_220/uploads/2019/07/24/5e997f6d41193.jpeg',
-    ingredients: [
-      'Pan integral',
-      'Rodajas de Palta madura',
-      'Huevo frito o escalfado'
-    ],
-    preparation: `1. Saque la pulpa de la palta y extiéndala sobre el pan tostado aplastándola con el dorso de un tenedor.
-    2. Espolvoree con sal, pimienta y un chorrito de limón. Agregue una capa de huevo duro y un poco más de sal y pimienta.`
-  };
+  private recipesService = inject(RecipesService);
+  id: number = 1;
+  recipe: any;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.id = +this.route.snapshot.paramMap.get('id')!;
+    this.getRecipe();
+  }
 
   saveRecipe() {
     alert('Receta guardada!');
+  }
+
+  getRecipe(): void {
+    this.recipe = this.recipesService.getRecipeById(this.id);
   }
 
 }

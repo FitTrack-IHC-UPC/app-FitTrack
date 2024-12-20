@@ -72,7 +72,7 @@ export const UserRoutes: Routes = [
                 children: [
                     { path: 'food-preference', component: FoodPreferenceComponent },
                     { path: 'meal-plan', component: MealPlanComponent },
-                    { path: 'recipe', component: RecipeComponent },
+                    { path: 'recipe/:id', component: RecipeComponent },
                 ]
             },
             //PROFILE-QUESTIONNAIRE COMPONENTS

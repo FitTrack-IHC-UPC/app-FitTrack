@@ -2,7 +2,7 @@ export interface Meal {
     id: number;
     name: string;
     calories: number;
-    image: Blob;
+    image: string;
     time: string;
     ingredients: string[];
     preparation: string;
