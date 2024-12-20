@@ -1,12 +1,14 @@
 # FittrackWeb
 <h2>Colaboradores: </h2>
-- De Cossio Velasquez, Alvaro Manuel
+- Sebastián Pablo Chacón Mendoza - 68005
 <br>
-- Chipana Rios, Andre Angel
+- Mayerli Helen Mamani Alinas - 65804
 <br>
-- Saavedra Cerveza, Sergio Andres
+- Johana Valeria Pardo Villaalta - 68044
 <br>
-- Coaguila Fuentes, Edison Jean Franco
+- Alexandra Carolina Ayaviri Canaza - 64283
+<br>
+- Alejandra Simón Calle - 90500
 
 
 
